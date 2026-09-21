@@ -1,2 +1,6 @@
 # Requirement_Analysis
-Dylan Jacob Fermo
+Darrin Yun - Problem Framer
+
+Dylan Fermo - Solution Framer
+
+Jacob Black - Front End & Experience
