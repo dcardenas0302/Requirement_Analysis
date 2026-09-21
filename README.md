@@ -1,4 +1,6 @@
 # Requirement_Analysis
-# Darrin Yun
-# Jacob Black - Front end and experience
-# Diego Cardenas Back-end and verification
+Darrin Yun - Problem Framer
+
+Dylan Fermo - Solution Framer
+
+Jacob Black - Front End & Experience
