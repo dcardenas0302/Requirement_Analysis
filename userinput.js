@@ -1,28 +1,37 @@
 const container = document.createElement("div");
 document.body.appendChild(container);
 
-const input1 = document.createElement("input");
-const input2 = document.createElement("input");
-const input3 = document.createElement("input");
-const input4 = document.createElement("input");
+function makeLabeledInput(labelText, placeholder) {
+  const wrapper = document.createElement("div");
+  const label = document.createElement("label");
+  label.textContent = labelText;
+  const input = document.createElement("input");
+  input.placeholder = placeholder;
+  wrapper.appendChild(label);
+  wrapper.appendChild(input);
+  container.appendChild(wrapper);
+  return input;
+}
 
-input1.placeholder = "Temp(c)";
-input2.placeholder = "Wind Speed (m/s)";
-input3.placeholder = "Humidity";
-input4.placeholder = "Days Since Rain";
-
-container.appendChild(input1);
-container.appendChild(input2);
-container.appendChild(input3);
-container.appendChild(input4);
+const input1 = makeLabeledInput("Temperature (C): ");
+const input2 = makeLabeledInput("Wind Speed (m/s): ");
+const input3 = makeLabeledInput("Humidity (%): ");
+const input4 = makeLabeledInput("Days Since Rain: ");
 
 const button = document.createElement("button");
 button.textContent = "Submit";
 document.body.appendChild(button);
 
-document.addEventListener("click", () =>{
-    const temp = input1.value;
-    const windSpeed = input2.value;
-    const humidity = input3.value;
-    const daysSinceRain = input4.value;
-})
+const output = document.createElement("p");
+output.id = "output";
+document.body.appendChild(output);
+
+button.addEventListener("click", () => {
+  const temp = parseFloat(input1.value);
+  const windSpeed = parseFloat(input2.value);
+  const humidity = parseFloat(input3.value);
+  const daysSinceRain = parseFloat(input4.value);
+
+  const risk = calculateRisk(temp, humidity, windSpeed, daysSinceRain);
+  output.textContent = "Wildfire Risk: " + risk + "%";
+});
