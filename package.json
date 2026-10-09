@@ -1,0 +1,24 @@
+{
+  "name": "requirement_analysis",
+  "version": "1.0.0",
+  "description": "Darrin Yun - Problem Framer",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcardenas0302/Requirement_Analysis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dcardenas0302/Requirement_Analysis/issues"
+  },
+  "homepage": "https://github.com/dcardenas0302/Requirement_Analysis#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
