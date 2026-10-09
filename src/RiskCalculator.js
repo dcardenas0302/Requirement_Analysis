@@ -1,7 +1,7 @@
 const RiskResult = require('./RiskResult');
 
 class RiskCalculator {
-  // calculateRisk(data: EnvironmentalData): RiskResult
+  // calculateRisk(data: InputData): RiskResult
   calculateRisk(data) {}
 
   // categorize(riskValue: float): string
